@@ -1,0 +1,24 @@
+
+<div class="container">
+  <div class="col- full-width">
+    <mat-tab-group>
+      <mat-tab *ngFor="let calendar of calendars$ | async" [label]="calendar.summary">
+
+        <calendar-calendar
+          [eventList]="events$ | async"
+          (createEventCallback)="onCreateEvent($event)"
+          (selectEventCallback)="onSelectCalendarEvent($event)"
+          (deleteEventCallback)="onDeleteCalendarEvent($event)"
+        ></calendar-calendar>
+
+        <!--<calendar-list
+          [items]="events$ | async"
+          [item]="event$ | async"
+          titleKey="summary"
+          subtitleKey="description"
+          (selectItem)="onSelectCalendarEvent($event)"
+        ></calendar-list>-->
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>

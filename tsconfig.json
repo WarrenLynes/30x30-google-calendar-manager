@@ -15,7 +15,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@calendar/material": ["libs/material/src/index.ts"],
+      "@calendar/ui": ["libs/ui/src/index.ts"],
+      "@calendar/core-state": ["libs/core-state/src/index.ts"],
+      "@calendar/core-data": ["libs/core-data/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

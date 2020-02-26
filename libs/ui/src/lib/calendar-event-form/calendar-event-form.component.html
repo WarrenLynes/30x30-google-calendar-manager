@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Summary" formControlName="summary" type="summary" name="summary">
+    <mat-error *ngIf="form.controls['summary'].hasError('required')">Summary is required</mat-error>
+  </mat-form-field>
+
+
+  <button mat-button type="submit"> ok </button>
+
+</form>
